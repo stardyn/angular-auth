@@ -1,0 +1,9 @@
+/package-lock.json
+/node_modules
+/.idea
+/dist
+/.npmrc
+/build.ps1
+/build_publish.ps1
+/build_publish_npmjs.ps1
+info.txt

@@ -1,0 +1,81 @@
+{
+  "name": "@stardyn/angular-auth",
+  "version": "2.0.9",
+  "description": "Angular Authentication Service - Lightweight, configurable authentication service for Angular applications with token management and role-based access control",
+  "main": "core.js",
+  "module": "core.js",
+  "browser": "core.js",
+  "umd": "core.js",
+  "types": "main.d.ts",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "pwsh -File ./build.ps1",
+    "build:prod": "pwsh -File ./build.ps1 -Production",
+    "build:npmjs": "pwsh -File ./build_publish_npmjs.ps1",
+    "build:private": "pwsh -File ./build_publish.ps1",
+    "publish:npmjs": "pwsh -File ./build_publish_npmjs.ps1 -Environment live",
+    "publish:private": "pwsh -File ./build_publish.ps1 -Environment live",
+    "publish:dry": "pwsh -File ./build_publish.ps1 -DryRun",
+    "publish:skip": "pwsh -File ./build_publish.ps1 -SkipBuild",
+    "clean": "rimraf dist",
+    "dev": "pwsh -File ./build.ps1 -Environment dev",
+    "test": "echo 'No tests specified'",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "~5.5.2",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^5.1.4",
+    "ts-loader": "^9.4.0",
+    "terser-webpack-plugin": "^5.3.0",
+    "rimraf": "^5.0.0"
+  },
+  "dependencies": {
+
+  },
+  "peerDependencies": {
+    "@angular/common": "^20.0.0",
+    "@angular/core": "^20.0.0",
+    "@angular/router": "^20.0.0",
+    "rxjs": ">=7.0.0",
+    "@stardyn/angular-console": "^2.0.9",
+    "@stardyn/angular-data-source": "^2.0.9",
+    "@stardyn/angular-helpers": "^2.0.9"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": [
+    "angular",
+    "authentication",
+    "auth",
+    "token-management",
+    "role-based-access",
+    "permission-guard",
+    "typescript",
+    "stardyn",
+    "angular-auth",
+    "oauth",
+    "jwt"
+  ],
+  "author": "Stardyn Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stardyn/angular-auth.git"
+  },
+  "homepage": "https://github.com/stardyn/angular-auth",
+  "bugs": {
+    "url": "https://github.com/stardyn/angular-auth/issues"
+  }
+}
