@@ -7,3 +7,5 @@
 /build_publish.ps1
 /build_publish_npmjs.ps1
 info.txt
+/.angular
+/out-tsc
